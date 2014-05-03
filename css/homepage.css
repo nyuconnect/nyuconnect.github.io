@@ -1,0 +1,21 @@
+body {
+    background-color:#9b59b6;
+
+}
+
+.categories {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 20%;
+    background-color: #e67e22;
+}
+
+h1 {
+    text-align: center;
+color: white;
+}
+
+a {
+    text-decoration: none;
+}
