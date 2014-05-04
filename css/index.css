@@ -1,25 +1,75 @@
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
 body {
-    background-image:url('../img/nyu.jpg');
+    background-image:url('../img/NYUcampus.jpg');
     background-repeat: no-repeat;
-   background-size: 100%;
+    background-size: 100%;
 }
 
 #logo {
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	color:white;
+	margin-bottom:15px;
+	background-color:hsla(276, 92%, 29%, 0.68)
 }
 
 #login {
     width: 40%;
     height: 30%;
-    background-color: #8e44ad;
+    background-color:hsla(360, 100%, 100%, 0.6);
     margin-left: auto;
     margin-right: auto;
+	}
+.myButton {
+	background-color:#57068c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:20px;
+	padding:13px 40px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #9752cc;
 }
+.myButton:hover {
+	background-color:white;
+	color:#57068c;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
 
 #word {
     font-size: 30px;
     margin-right: auto;
     margin-left: auto;
+	text-align:center;
+	font-family: 'Montserrat', sans-serif;
 
 }

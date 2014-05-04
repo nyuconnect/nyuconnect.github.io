@@ -24,21 +24,38 @@ BODY STYLING
 	outline: none;
 }
 
-body {
+img.bg {
+  /* Set rules to fill background */
+  height: 100%;
+  min-width: 1024px;
 	
-	background: url('images/bg.png');
-	background-color:#2E0854;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-weight:300;
-	text-align: left;
-	text-decoration: none;
-	height: 500px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+body {
+    background-image:url('../img/fountain.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% ;
 }
 
 #wrapper {
 	/* Center wrapper perfectly */
 	width: 300px;
-	height: 400px;
+	height: 100%;
 	margin: 70px auto;
 }
 
@@ -68,42 +85,6 @@ body {
 	bottom: 24px;
 }
 
-/*
-.gradient {
-	width: 600px;
-	height: 600px;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	margin-left: -300px;
-	margin-top: -300px;
-	
-	background: url(images/gradient.png) no-repeat;
-}
-*/
-
-.gradient {
-	/* Center Positioning */
-	width: 600px;
-	height: 600px;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	margin-left: -300px;
-	margin-top: -300px;
-	z-index: -2;
-	<a href="firechat-master/examples/anonymous_auth.html">
-	/* Fallback */ 
-	background-image: url(images/gradient.png); 
-	background-repeat: no-repeat; 
-	
-	/* CSS3 Gradient */
-	background-image: -webkit-gradient(radial, 0% 0%, 0% 100%, from(rgba(213,246,255,1)), to(rgba(213,246,255,0)));
-	background-image: -webkit-radial-gradient(50% 50%, 40% 40%, rgba(213,246,255,1), rgba(213,246,255,0));
-	background-image: -moz-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
-	background-image: -ms-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
-	background-image: -o-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
-}
 
 /*******************
 LOGIN FORM

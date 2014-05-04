@@ -44,6 +44,9 @@
 <body>
 <div id="firechat-wrapper"></div>
 <script type='text/javascript'>
+    
+
+      
     var chatRef = new Firebase('https://firechat-demo.firebaseio.com');
     var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
     var simpleLogin = new FirebaseSimpleLogin(chatRef, function(err, user) {
@@ -51,12 +54,17 @@
             chat.setUser(user.id, 'Anonymous' + user.id.substr(0, 8));
             setTimeout(function(){
                 chat._chat.createRoom('Pop', 'public', '-pop');
-                chat._chat.enterRoom('-pop');
+               // chat._chat.enterRoom('-pop');
+        //chat._chat.inviteUser('Anonymous' + user.id, '-pop');
+
+
+            console.log(user.id);
             }, 250);
         } else {
             simpleLogin.login('anonymous');
         }
     });
+
 </script>
 </body>
 </html>
