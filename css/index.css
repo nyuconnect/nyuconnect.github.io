@@ -21,6 +21,7 @@ img.bg {
     margin-left: -512px;   /* 50% */
   }
 }
+
 body {
     background-image:url('../img/NYUcampus.jpg');
     background-repeat: no-repeat;
